@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>E-commerce product page</title>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="new-style.css" />
+
+    <!-- JS -->
+    <script src="./js/navToggle.js" defer></script>
+    <script src="./js/image-manipulation.js" defer></script>
+    <script src="./js/cart.js" defer></script>
+  </head>
+  <body>
+    <header class="primary-header grid">
+      <button
+        class="mobile-nav-toggle"
+        aria-control="primary-navigation"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Menu</span>
+      </button>
+      <picture>
+        <img src="./images/logo.svg" alt="logo of sneakers company" />
+      </picture>
+
+      <nav>
+        <button
+          class="mobile-nav-toggle"
+          aria-control="primary-navigation"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Menu</span>
+        </button>
+        <ul class="flex flex-column">
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- cart container button -->
+      <button class="cart-icon cart-image" aria-expanded="false">
+        <img src="./images/icon-cart.svg" alt="cart icon" />
+      </button>
+      <!-- cart container -->
+      <div class="cart">
+        <div>
+          <h4 class="text-neutral-100">Cart</h4>
+        </div>
+        <div class="stuff-in-cart flex flex-column" style="--gap: 0">
+          <p class="text-empty text-neutral-100">Your cart is empty.</p>
+        </div>
+        <button class="checkout background-color-primary text-white">
+          Checkout
+        </button>
+      </div>
+      <!-- cart container end  -->
+
+      <picture class="profile-image">
+        <img src="./images/image-avatar.png" alt="image of someone" />
+      </picture>
+    </header>
+
+    <main id="main" class="container grid">
+      <section>
+        <div class="product-preview">
+          <picture data-image-id="image-product-1">
+            <img src="./images/image-product-1.jpg" alt="image of product-1" />
+          </picture>
+          <picture data-image-id="image-product-2" hidden>
+            <img src="./images/image-product-2.jpg" alt="image of product-2" />
+          </picture>
+          <picture data-image-id="image-product-3" hidden>
+            <img src="./images/image-product-3.jpg" alt="image of product-3" />
+          </picture>
+          <picture data-image-id="image-product-4" hidden>
+            <img src="./images/image-product-4.jpg" alt="image of product-4" />
+          </picture>
+        </div>
+        <div class="product-thumbnails flex" style="--gap: 1rem">
+          <picture class="active" data-thumb-id="image-product-1">
+            <img
+              src="./images/image-product-1-thumbnail.jpg"
+              alt="image of product-1"
+              data-type="product-image"
+            />
+          </picture>
+          <picture data-thumb-id="image-product-2">
+            <img
+              src="./images/image-product-2-thumbnail.jpg"
+              alt="image of product-2"
+            />
+          </picture>
+          <picture data-thumb-id="image-product-3">
+            <img
+              src="./images/image-product-3-thumbnail.jpg"
+              alt="image of product-3"
+            />
+          </picture>
+          <picture data-thumb-id="image-product-4">
+            <img
+              src="./images/image-product-4-thumbnail.jpg"
+              alt="image of product-4"
+            />
+          </picture>
+        </div>
+      </section>
+
+      <section class="product-details grid">
+        <article class="grid" style="--gap: 1rem">
+          <h2 class="text-primary uppercase fs-100">Sneaker company</h2>
+          <h1 class="text-neutral-100 fs-200" data-type="product-name">
+            Fall Limited Edition <span class="d-block">Sneakers</span>
+          </h1>
+          <p>
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+        </article>
+
+        <div class="price-details grid">
+          <h3 class="text-neutral-100 fs-200">
+            $<span data-type="price">125.00</span>
+          </h3>
+          <div class="text-primary background-color-primary-light">
+            <p>50%</p>
+          </div>
+          <p class="line-through">$250.00</p>
+        </div>
+
+        <div class="add-to-cart-form flex flex-column" style="--gap: 1rem">
+          <div class="quantity-component flex">
+            <button class="minus-btn">
+              <span class="sr-only">remove from cart</span>
+            </button>
+            <input
+              type="text"
+              name="quantity"
+              id="quantity"
+              value="0"
+              min="0"
+              max="20"
+              data-type="quantity"
+            />
+            <button class="plus-btn">
+              <span class="sr-only">put inside cart</span>
+            </button>
+          </div>
+
+          <button
+            class="add-to-cart-button background-color-primary text-white"
+          >
+            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                fill="#ffffff"
+                fill-rule="nonzero"
+              />
+            </svg>
+            Add to cart
+          </button>
+        </div>
+      </section>
+    </main>
+    <!-- full screen image component -->
+    <section class="fullScreenImage" aria-hidden="true">
+      <button class="close-icon" alt="close icon.jpg">
+        <!-- <img src="./images/icon-close.svg" alt="exit full screen" /> -->
+      </button>
+
+      <div class="product-preview">
+        <picture data-image-id="image-product-1">
+          <img src="./images/image-product-1.jpg" alt="image of product-1" />
+        </picture>
+        <picture data-image-id="image-product-2" hidden>
+          <img src="./images/image-product-2.jpg" alt="image of product-2" />
+        </picture>
+        <picture data-image-id="image-product-3" hidden>
+          <img src="./images/image-product-3.jpg" alt="image of product-3" />
+        </picture>
+        <picture data-image-id="image-product-4" hidden>
+          <img src="./images/image-product-4.jpg" alt="image of product-4" />
+        </picture>
+      </div>
+      <div class="product-thumbnails flex">
+        <picture data-thumb-id="image-product-1">
+          <img
+            src="./images/image-product-1-thumbnail.jpg"
+            alt="image of product-1"
+            data-type="product-image"
+          />
+        </picture>
+        <picture data-thumb-id="image-product-2">
+          <img
+            src="./images/image-product-2-thumbnail.jpg"
+            alt="image of product-2"
+          />
+        </picture>
+        <picture data-thumb-id="image-product-3">
+          <img
+            src="./images/image-product-3-thumbnail.jpg"
+            alt="image of product-3"
+          />
+        </picture>
+        <picture data-thumb-id="image-product-4">
+          <img
+            src="./images/image-product-4-thumbnail.jpg"
+            alt="image of product-4"
+          />
+        </picture>
+      </div>
+    </section>
+    <template class="cart-stuff-template">
+      <div class="grid">
+        <img src="" />
+        <div>
+          <p class="product-name"></p>
+          <p class="total-price"></p>
+        </div>
+        <button class="delete"></button>
+      </div>
+    </template>
+  </body>
+</html>
