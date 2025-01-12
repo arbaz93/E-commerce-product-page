@@ -1,6 +1,6 @@
 # E-commerce Product Page  
 
-Welcome to the E-commerce Product Page project! This project showcases a modern and responsive product page for an online store, developed using HTML and CSS.   
+Welcome to the E-commerce Product Page project! This project showcases a modern and responsive product page for an online store, developed using HTML, CSS and Javascript.   
 
 ## Preview  
 
@@ -26,7 +26,8 @@ Visit the GitHub repository for the source code: [GitHub Repository](https://git
 ## Skills Used  
 
 - HTML  
-- CSS  
+- CSS
+- Javascript
 - Responsive Design  
 - Modern Layout  
 
