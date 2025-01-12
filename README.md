@@ -2,6 +2,10 @@
 
 Welcome to the E-commerce Product Page project! This project showcases a modern and responsive product page for an online store, developed using HTML and CSS.   
 
+## Preview  
+
+![Desktop Preview](./design/desktop-preview.jpg)  
+
 ## Live Demo  
 
 Check out the live version of the project here: [Live Website](https://arbaz93.github.io/E-commerce-product-page/)  
@@ -25,10 +29,6 @@ Visit the GitHub repository for the source code: [GitHub Repository](https://git
 - CSS  
 - Responsive Design  
 - Modern Layout  
-
-## Preview  
-
-![Desktop Preview](./design/desktop-preview.jpg)  
 
 ## Getting Started  
 
